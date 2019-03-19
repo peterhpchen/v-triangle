@@ -1,8 +1,8 @@
 # v-triangle
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/vue"><img src="https://img.shields.io/npm/v/v-triangle.svg" alt="Version"></a>
-  <a href="https://www.npmjs.com/package/vue"><img src="https://img.shields.io/npm/l/v-triangle.svg" alt="License"></a>
+  <a href="https://www.npmjs.com/package/v-triangle"><img src="https://img.shields.io/npm/v/v-triangle.svg" alt="Version"></a>
+  <a href="https://www.npmjs.com/package/v-triangle"><img src="https://img.shields.io/npm/l/v-triangle.svg" alt="License"></a>
 </p>
 
 Simple triangle icon which made by html element.
