@@ -1,14 +1,27 @@
 {
   "name": "v-triangle",
   "version": "0.1.0",
+  "description": "Simple triangle icon which made by html element.",
   "main": "dist/v-triangle.common.js",
-  "license": "MIT",
+  "unpkg": "dist/v-triangle.umd.js",
+  "jsdelivr": "dist/v-triangle.umd.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "build-bundle": "vue-cli-service build --target lib --name v-triangle ./src/components/index.js",
     "lint": "vue-cli-service lint"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/peterhpchen/v-triangle"
+  },
+  "keywords": ["vue"],
+  "author": "Peter Chen <peterhsinpingchen@gmail.com> (https://github.com/peterhpchen)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/peterhpchen/v-triangle/issues"
+  },
+  "homepage": "https://github.com/peterhpchen/v-triangle",
   "dependencies": {
     "vue": "^2.6.6"
   },
