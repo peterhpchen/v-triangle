@@ -1,6 +1,12 @@
 # v-triangle
 
 <p align="center">
+  <a href="https://github.com/peterhpchen/v-triangle" target="_blank">
+    <img width="200" src="./logo.png">
+  </a>
+</p>
+
+<p align="center">
   <a href="https://www.npmjs.com/package/v-triangle"><img src="https://img.shields.io/npm/v/v-triangle.svg" alt="Version"></a>
   <a href="https://www.npmjs.com/package/v-triangle"><img src="https://img.shields.io/npm/l/v-triangle.svg" alt="License"></a>
 </p>
@@ -58,7 +64,7 @@ color|String||black|Color of triangle. It could be any valid css color.
 
 ## Road map
 
-- [ ] Set unpkg target.
+- [ x ] Set unpkg target.
 - [ ] Unit test.
 - [ ] Add Storybook.
-- [ ] Add `up-right`, `up-left`, `down-``right`, `down-left` direction.
+- [ ] Add `up-right`, `up-left`, `down-right`, `down-left` direction.
