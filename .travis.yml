@@ -3,7 +3,7 @@ node_js:
   - "11"
 
 script:
-  - yarn unit
+  - yarn test:unit
 
 cache:
   yarn: true
