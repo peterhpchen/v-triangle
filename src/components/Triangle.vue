@@ -42,6 +42,9 @@ export default {
       const { height, width, color } = this;
       const widthRe = /^(\d*\.?\d*)(ch|em|ex|rem|vh|vw|vmin|vmax|px|cm|mm|in|pc|pt)$/;
       const widthReResult = widthRe.exec(width);
+
+      if(!widthReResult || widthReResult.length === 0) return;
+
       const widthNumber = widthReResult[1] / 2; // split equally to two border
       const widthUnit = widthReResult[2];
 

@@ -2,34 +2,26 @@
   "name": "v-triangle",
   "version": "0.1.0",
   "description": "Simple triangle icon which made by html element.",
-  "main": "dist/v-triangle.common.js",
-  "unpkg": "dist/v-triangle.umd.js",
-  "jsdelivr": "dist/v-triangle.umd.js",
+  "author": "Peter Chen <peterhsinpingchen@gmail.com> (https://github.com/peterhpchen)",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
     "build-bundle": "vue-cli-service build --target lib --name v-triangle ./src/components/index.js",
-    "lint": "vue-cli-service lint"
+    "test:unit": "vue-cli-service test:unit"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/peterhpchen/v-triangle"
-  },
-  "keywords": ["vue"],
-  "author": "Peter Chen <peterhsinpingchen@gmail.com> (https://github.com/peterhpchen)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/peterhpchen/v-triangle/issues"
-  },
-  "homepage": "https://github.com/peterhpchen/v-triangle",
   "dependencies": {
     "vue": "^2.6.6"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.5.0",
     "@vue/cli-plugin-eslint": "^3.5.0",
+    "@vue/cli-plugin-unit-jest": "^3.5.1",
     "@vue/cli-service": "^3.5.0",
+    "@vue/test-utils": "1.0.0-beta.29",
+    "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
     "vue-template-compiler": "^2.5.21"
@@ -57,5 +49,20 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "bugs": {
+    "url": "https://github.com/peterhpchen/v-triangle/issues"
+  },
+  "homepage": "https://github.com/peterhpchen/v-triangle",
+  "jsdelivr": "dist/v-triangle.umd.js",
+  "keywords": [
+    "vue"
+  ],
+  "license": "MIT",
+  "main": "dist/v-triangle.common.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/peterhpchen/v-triangle"
+  },
+  "unpkg": "dist/v-triangle.umd.js"
 }
