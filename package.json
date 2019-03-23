@@ -1,6 +1,6 @@
 {
   "name": "v-triangle",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Simple triangle icon which made by html element.",
   "author": "Peter Chen <peterhsinpingchen@gmail.com> (https://github.com/peterhpchen)",
   "scripts": {
