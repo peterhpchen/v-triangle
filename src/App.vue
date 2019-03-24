@@ -23,6 +23,12 @@
         color="#ffffff"
       />
     </div>
+    <Triangle
+      class="vue-icon__triangle"
+      height="5rem"
+      width="5rem"
+      direction="topRight"
+    />
   </div>
 </template>
 

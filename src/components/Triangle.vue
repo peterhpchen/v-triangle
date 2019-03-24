@@ -28,7 +28,7 @@ export default {
       type: String,
       default: 'up',
       validator(value) {
-        const directionTypes = ['up', 'down', 'left', 'right'];
+        const directionTypes = ['up', 'down', 'left', 'right', 'topRight'];
         return directionTypes.includes(value);
       },
     },
@@ -40,18 +40,27 @@ export default {
   computed: {
     style() {
       const { height, width, color } = this;
-      const widthRe = /^(\d*\.?\d*)(ch|em|ex|rem|vh|vw|vmin|vmax|px|cm|mm|in|pc|pt)$/;
-      const widthReResult = widthRe.exec(width);
-
-      if(!widthReResult || widthReResult.length === 0) return;
-
-      const widthNumber = widthReResult[1] / 2; // split equally to two border
-      const widthUnit = widthReResult[2];
 
       const result = {
         width: 0,
         height: 0,
       };
+
+      if (this.direction === 'topRight') {
+        return {
+          ...result,
+          'border-top': `${height} ${color} solid`,
+          'border-left': `${width} transparent solid`,
+        };
+      }
+
+      const widthRe = /^(\d*\.?\d*)(ch|em|ex|rem|vh|vw|vmin|vmax|px|cm|mm|in|pc|pt)$/;
+      const widthReResult = widthRe.exec(width);
+
+      if(!widthReResult || widthReResult.length === 0) return;
+        
+      const widthNumber = widthReResult[1] / 2; // split equally to two border
+      const widthUnit = widthReResult[2];
 
       if (this.direction === 'up') {
         return {
