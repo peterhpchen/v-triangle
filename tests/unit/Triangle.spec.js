@@ -79,6 +79,21 @@ describe('Triangle.vue', () => {
 
     mockConsoleError.mockRestore();
   });
+  it('should have top left direction', () => {
+    const mockConsoleError = jest.spyOn(console, 'error').mockImplementationOnce(() => {});
+
+    const wrapper = shallowMount(Triangle, {
+      propsData: {
+        height: '1px',
+        width: '1px',
+        direction: 'topLeft'
+      },
+    });
+
+    expect(mockConsoleError.mock.calls.length).toBe(0);
+
+    mockConsoleError.mockRestore();
+  });
   it('should zero width and height', () => {
     const height = 1;
     const width = 1;
@@ -93,7 +108,7 @@ describe('Triangle.vue', () => {
     expect(wrapper.element.style.height).toBe('0px');
     expect(wrapper.element.style.width).toBe('0px');
   });
-  it.only('should have top right direction triangle when the direction property is `topRight`', () => {
+  it('should have top right direction triangle when the direction property is `topRight`', () => {
     const height = 1;
     const width = 1;
     const unit = 'px';
@@ -113,6 +128,27 @@ describe('Triangle.vue', () => {
     expect(wrapper.element.style.borderLeftColor).toBe('transparent');
     
     expect(wrapper.element.style.borderRight).toBe('');
+  });
+  it('should have top left direction triangle when the direction property is `topLeft`', () => {
+    const height = 1;
+    const width = 1;
+    const unit = 'px';
+    const wrapper = shallowMount(Triangle, {
+      propsData: {
+        height: height + unit,
+        width: width + unit,
+        direction: 'topLeft',
+      },
+    });
+
+    expect(wrapper.element.style.border).toEqual(expect.anything());
+
+    expect(wrapper.element.style.borderTopWidth).toBe(height + unit);
+    
+    expect(wrapper.element.style.borderRightWidth).toBe(width + unit);
+    expect(wrapper.element.style.borderRightColor).toBe('transparent');
+    
+    expect(wrapper.element.style.borderLeft).toBe('');
   });
   it('should have up direction triangle when the direction property is `up`', () => {
     const height = 1;

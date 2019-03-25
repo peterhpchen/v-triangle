@@ -28,7 +28,7 @@ export default {
       type: String,
       default: 'up',
       validator(value) {
-        const directionTypes = ['up', 'down', 'left', 'right', 'topRight'];
+        const directionTypes = ['up', 'down', 'left', 'right', 'topRight', 'topLeft'];
         return directionTypes.includes(value);
       },
     },
@@ -51,6 +51,13 @@ export default {
           ...result,
           'border-top': `${height} ${color} solid`,
           'border-left': `${width} transparent solid`,
+        };
+      }
+      if (this.direction === 'topLeft') {
+        return {
+          ...result,
+          'border-top': `${height} ${color} solid`,
+          'border-right': `${width} transparent solid`,
         };
       }
 
