@@ -24,10 +24,44 @@
       />
     </div>
     <Triangle
-      class="vue-icon__triangle"
+      height="5rem"
+      width="5rem"
+      direction="up"
+    />
+    <Triangle
+      height="5rem"
+      width="5rem"
+      direction="bottom"
+    />
+    <Triangle
+      height="5rem"
+      width="5rem"
+      direction="right"
+    />
+    <Triangle
+      height="5rem"
+      width="5rem"
+      direction="left"
+    />
+    <Triangle
       height="5rem"
       width="5rem"
       direction="topRight"
+    />
+    <Triangle
+      height="5rem"
+      width="5rem"
+      direction="topLeft"
+    />
+    <Triangle
+      height="5rem"
+      width="5rem"
+      direction="bottomRight"
+    />
+    <Triangle
+      height="5rem"
+      width="5rem"
+      direction="bottomLeft"
     />
   </div>
 </template>

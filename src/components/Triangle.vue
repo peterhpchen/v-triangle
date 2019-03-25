@@ -28,7 +28,7 @@ export default {
       type: String,
       default: 'up',
       validator(value) {
-        const directionTypes = ['up', 'down', 'left', 'right', 'topRight', 'topLeft'];
+        const directionTypes = ['up', 'down', 'left', 'right', 'topRight', 'topLeft', 'bottomRight', 'bottomLeft'];
         return directionTypes.includes(value);
       },
     },
@@ -57,6 +57,20 @@ export default {
         return {
           ...result,
           'border-top': `${height} ${color} solid`,
+          'border-right': `${width} transparent solid`,
+        };
+      }
+      if (this.direction === 'bottomRight') {
+        return {
+          ...result,
+          'border-bottom': `${height} ${color} solid`,
+          'border-left': `${width} transparent solid`,
+        };
+      }
+      if (this.direction === 'bottomLeft') {
+        return {
+          ...result,
+          'border-bottom': `${height} ${color} solid`,
           'border-right': `${width} transparent solid`,
         };
       }

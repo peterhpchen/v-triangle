@@ -94,6 +94,36 @@ describe('Triangle.vue', () => {
 
     mockConsoleError.mockRestore();
   });
+  it('should have bottom right direction', () => {
+    const mockConsoleError = jest.spyOn(console, 'error').mockImplementationOnce(() => {});
+
+    const wrapper = shallowMount(Triangle, {
+      propsData: {
+        height: '1px',
+        width: '1px',
+        direction: 'bottomRight'
+      },
+    });
+
+    expect(mockConsoleError.mock.calls.length).toBe(0);
+
+    mockConsoleError.mockRestore();
+  });
+  it('should have bottom left direction', () => {
+    const mockConsoleError = jest.spyOn(console, 'error').mockImplementationOnce(() => {});
+
+    const wrapper = shallowMount(Triangle, {
+      propsData: {
+        height: '1px',
+        width: '1px',
+        direction: 'bottomLeft'
+      },
+    });
+
+    expect(mockConsoleError.mock.calls.length).toBe(0);
+
+    mockConsoleError.mockRestore();
+  });
   it('should zero width and height', () => {
     const height = 1;
     const width = 1;
@@ -144,6 +174,48 @@ describe('Triangle.vue', () => {
     expect(wrapper.element.style.border).toEqual(expect.anything());
 
     expect(wrapper.element.style.borderTopWidth).toBe(height + unit);
+    
+    expect(wrapper.element.style.borderRightWidth).toBe(width + unit);
+    expect(wrapper.element.style.borderRightColor).toBe('transparent');
+    
+    expect(wrapper.element.style.borderLeft).toBe('');
+  });
+  it('should have bottom right direction triangle when the direction property is `bottomRight`', () => {
+    const height = 1;
+    const width = 1;
+    const unit = 'px';
+    const wrapper = shallowMount(Triangle, {
+      propsData: {
+        height: height + unit,
+        width: width + unit,
+        direction: 'bottomRight',
+      },
+    });
+
+    expect(wrapper.element.style.border).toEqual(expect.anything());
+
+    expect(wrapper.element.style.borderBottomWidth).toBe(height + unit);
+    
+    expect(wrapper.element.style.borderLeftWidth).toBe(width + unit);
+    expect(wrapper.element.style.borderLeftColor).toBe('transparent');
+    
+    expect(wrapper.element.style.borderRight).toBe('');
+  });
+  it('should have bottom left direction triangle when the direction property is `bottomLeft`', () => {
+    const height = 1;
+    const width = 1;
+    const unit = 'px';
+    const wrapper = shallowMount(Triangle, {
+      propsData: {
+        height: height + unit,
+        width: width + unit,
+        direction: 'bottomLeft',
+      },
+    });
+
+    expect(wrapper.element.style.border).toEqual(expect.anything());
+
+    expect(wrapper.element.style.borderBottomWidth).toBe(height + unit);
     
     expect(wrapper.element.style.borderRightWidth).toBe(width + unit);
     expect(wrapper.element.style.borderRightColor).toBe('transparent');
