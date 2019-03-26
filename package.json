@@ -8,7 +8,8 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "build-bundle": "vue-cli-service build --target lib --name v-triangle ./src/components/index.js",
-    "test:unit": "vue-cli-service test:unit"
+    "test:unit": "vue-cli-service test:unit",
+    "prepublishOnly": "yarn lint && yarn test:unit && yarn build-bundle"
   },
   "dependencies": {
     "vue": "^2.6.6"

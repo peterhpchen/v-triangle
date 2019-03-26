@@ -26,9 +26,9 @@ export default {
     },
     direction: {
       type: String,
-      default: 'up',
+      default: 'top',
       validator(value) {
-        const directionTypes = ['up', 'down', 'left', 'right', 'topRight', 'topLeft', 'bottomRight', 'bottomLeft'];
+        const directionTypes = ['top', 'bottom', 'left', 'right', 'topRight', 'topLeft', 'bottomRight', 'bottomLeft'];
         return directionTypes.includes(value);
       },
     },
@@ -83,7 +83,7 @@ export default {
       const widthNumber = widthReResult[1] / 2; // split equally to two border
       const widthUnit = widthReResult[2];
 
-      if (this.direction === 'up') {
+      if (this.direction === 'top') {
         return {
           ...result,
           'border-bottom': `${height} ${color} solid`,
@@ -91,7 +91,7 @@ export default {
           'border-right': `${widthNumber}${widthUnit} transparent solid`,
         };
       }
-      if (this.direction === 'down') {
+      if (this.direction === 'bottom') {
         return {
           ...result,
           'border-top': `${height} ${color} solid`,

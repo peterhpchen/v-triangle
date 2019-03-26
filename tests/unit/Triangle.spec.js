@@ -3,14 +3,14 @@ import Triangle from '@/components/Triangle.vue';
 
 describe('Triangle.vue', () => {
   const defaultValue = {
-    direction: 'up',
+    direction: 'top',
     color: 'black',
   };
 
   it('should required `height` property', () => {
     const mockConsoleError = jest.spyOn(console, 'error').mockImplementationOnce(() => {});
 
-    const wrapper = shallowMount(Triangle, {
+    shallowMount(Triangle, {
       propsData: {
         width: '1px',
       }
@@ -23,7 +23,7 @@ describe('Triangle.vue', () => {
   it('should required `width` property', () => {
     const mockConsoleError = jest.spyOn(console, 'error').mockImplementationOnce(() => {});
 
-    const wrapper = shallowMount(Triangle, {
+    shallowMount(Triangle, {
       propsData: {
         height: '1px',
       }
@@ -67,7 +67,7 @@ describe('Triangle.vue', () => {
   it('should have top right direction', () => {
     const mockConsoleError = jest.spyOn(console, 'error').mockImplementationOnce(() => {});
 
-    const wrapper = shallowMount(Triangle, {
+    shallowMount(Triangle, {
       propsData: {
         height: '1px',
         width: '1px',
@@ -82,7 +82,7 @@ describe('Triangle.vue', () => {
   it('should have top left direction', () => {
     const mockConsoleError = jest.spyOn(console, 'error').mockImplementationOnce(() => {});
 
-    const wrapper = shallowMount(Triangle, {
+    shallowMount(Triangle, {
       propsData: {
         height: '1px',
         width: '1px',
@@ -97,7 +97,7 @@ describe('Triangle.vue', () => {
   it('should have bottom right direction', () => {
     const mockConsoleError = jest.spyOn(console, 'error').mockImplementationOnce(() => {});
 
-    const wrapper = shallowMount(Triangle, {
+    shallowMount(Triangle, {
       propsData: {
         height: '1px',
         width: '1px',
@@ -112,7 +112,7 @@ describe('Triangle.vue', () => {
   it('should have bottom left direction', () => {
     const mockConsoleError = jest.spyOn(console, 'error').mockImplementationOnce(() => {});
 
-    const wrapper = shallowMount(Triangle, {
+    shallowMount(Triangle, {
       propsData: {
         height: '1px',
         width: '1px',
@@ -222,7 +222,7 @@ describe('Triangle.vue', () => {
     
     expect(wrapper.element.style.borderLeft).toBe('');
   });
-  it('should have up direction triangle when the direction property is `up`', () => {
+  it('should have top direction triangle when the direction property is `top`', () => {
     const height = 1;
     const width = 1;
     const unit = 'px';
@@ -230,6 +230,7 @@ describe('Triangle.vue', () => {
       propsData: {
         height: height + unit,
         width: width + unit,
+        direction: 'top',
       },
     });
 
@@ -243,7 +244,7 @@ describe('Triangle.vue', () => {
     expect(wrapper.element.style.borderRightWidth).toBe((height / 2) + unit);
     expect(wrapper.element.style.borderRightColor).toBe('transparent');
   });
-  it('should have down direction triangle when the direction property is `down`', () => {
+  it('should have bottom direction triangle when the direction property is `bottom`', () => {
     const height = 1;
     const width = 1;
     const unit = 'px';
@@ -251,7 +252,7 @@ describe('Triangle.vue', () => {
       propsData: {
         height: height + unit,
         width: width + unit,
-        direction: 'down',
+        direction: 'bottom',
       },
     });
 
