@@ -60,12 +60,13 @@ Name|Type|Required|Default|Description
 -|-|-|-|-
 height|String|:white_check_mark:||Height of triangle. Its unit could be `ch`, `em`, `ex`, `rem`, `vh`, `vw`, `vmin`, `vmax`, `px`, `cm`, `mm`, `in`, `pc`, `pt`.
 width|String|:white_check_mark:||Width of triangle. Its unit could be `ch`, `em`, `ex`, `rem`, `vh`, `vw`, `vmin`, `vmax`, `px`, `cm`, `mm`, `in`, `pc`, `pt`.
-direction|String||up|Direction of triangle. It could be `up`, `down`, `left`, `right`.
+direction|String||top|Direction of triangle. It could be `top`, `bottom`, `left`, `right`, `topLeft`, `topRight`, `bottomLeft`, `bottomRight`.
 color|String||black|Color of triangle. It could be any valid css color.
 
 ## Road map
 
 - [x] Set unpkg target.
 - [x] Unit test.
-- [ ] Add Storybook.
-- [ ] Add `up-right`, `up-left`, `down-right`, `down-left` direction.
+- [x] Add Storybook.
+- [x] Add `topRight`, `topLeft`, `bottomRight`, `bottomLeft` direction.
+- [] Project page ( Storybook ).
