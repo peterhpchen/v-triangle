@@ -23,7 +23,7 @@ storiesOf('Triangle', module)
         },
         color: {
             type: String,
-            default: color('Color', '#41b883')
+            default: color('Color', '#354951')
         }
     },
     computed: {
@@ -134,7 +134,7 @@ storiesOf('Triangle', module)
       :color="color"
     />`,
   }))
-  .add('right', () => ({
+  .add('Right', () => ({
     components: { Triangle },
     props: {
         height: {
@@ -196,7 +196,7 @@ storiesOf('Triangle', module)
       :color="color"
     />`,
   }))
-  .add('TopLeft', () => ({
+  .add('Top Left', () => ({
     components: { Triangle },
     props: {
         height: {
@@ -227,7 +227,7 @@ storiesOf('Triangle', module)
       :color="color"
     />`,
   }))
-  .add('BottomRight', () => ({
+  .add('Bottom Right', () => ({
     components: { Triangle },
     props: {
         height: {
